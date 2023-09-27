@@ -3,8 +3,6 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors';
 import guitarsRoutes from './routes/guitars.js';
-import dotenv from 'dotenv'
-dotenv.config()
 
 const app = express();
 
@@ -32,10 +30,10 @@ const MONGO = process.env.MONGODB_CONNECT_URL;
 
 mongoose
   .connect(
-    MONGO
+    "mongodb+srv://admin:admin@cluster0.ex7ayrz.mongodb.net/guitar-cave?retryWrites=true&w=majority"
   )
   .then(() => {
-    app.listen(PORT, () => {
+    app.listen(8080, () => {
       console.log("Guitar Cave Backend is Running on PORT 8080");
     });
     console.log("connected to mongoDB");
