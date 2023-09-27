@@ -9,11 +9,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/"
-      },
-      {
-        "src": "/guitars.js",
-        "dest": "/routes"
+        "dest": "/index.js"
       }
     ]
   }
