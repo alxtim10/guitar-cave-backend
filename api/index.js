@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors';
-import guitarsRoutes from './routes/guitars.js';
+import guitarsRoutes from '../routes/guitars.js';
 import dotenv from 'dotenv'
 dotenv.config()
 
