@@ -1,4 +1,5 @@
-import Guitars from "../models/guitarsModel.js"
+import Guitars from "../models/guitarsModel.js";
+import {guitarShopData, guitarFeaturedData} from "../models/guitarData.js";
 
 export const createGuitar = async (req, res) => {
   try {
@@ -11,8 +12,8 @@ export const createGuitar = async (req, res) => {
 
 export const getGuitars = async (req, res) => {
   try {
-    const product = await Guitars.find({});
-    res.status(200).json(product);
+    // const product = await Guitars.find({});
+    res.status(200).json(guitarShopData);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
